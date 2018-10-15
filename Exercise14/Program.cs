@@ -20,8 +20,27 @@ namespace Exercise14
             {
                 int iSquared = i * i;
                 Console.WriteLine($"Your number is: {iSquared}" );
-
+                if(i >= firstNumber)
+                {
+                    Console.Write("Would you like to continue (y/n): ");
+                    string  newAnswer = Console.ReadLine();
+                    if (newAnswer == "y" || newAnswer == "Y") 
+                    {
+                        Console.Write("Enter a number: ");
+                        userEntryOne = Console.ReadLine();
+                        int.TryParse(userEntryOne, out firstNumber);
+                        i = 0;
+                        continue;
+                    }
+                    else if (newAnswer == "n" || newAnswer == "N")
+                    {
+                        break;
+                    }
+                }
             }
+
+            
+            
 
             Console.ReadKey();
 
