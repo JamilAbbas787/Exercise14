@@ -36,10 +36,15 @@ namespace Exercise14
                     {
                         break;
                     }
+                    else
+                    {
+                        Console.WriteLine("Value entered was not y or n!");
+                        break;
+                    }
                 }
             }
 
-            
+            Console.WriteLine("Good Bye!!!");
             
 
             Console.ReadKey();
