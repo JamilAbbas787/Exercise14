@@ -24,7 +24,7 @@ namespace Exercise14
                 {
                     Console.Write("Would you like to continue (y/n): ");
                     string  newAnswer = Console.ReadLine();
-                    if (newAnswer == "y" || newAnswer == "Y") 
+                    if (newAnswer.Equals("y",StringComparison.OrdinalIgnoreCase)) 
                     {
                         Console.Write("Enter a number: ");
                         userEntryOne = Console.ReadLine();
@@ -32,7 +32,7 @@ namespace Exercise14
                         i = 0;
                         continue;
                     }
-                    else if (newAnswer == "n" || newAnswer == "N")
+                    else if (newAnswer.Equals("n", StringComparison.OrdinalIgnoreCase))
                     {
                         break;
                     }
@@ -44,11 +44,10 @@ namespace Exercise14
                 }
             }
 
-            Console.WriteLine("Good Bye!!!");
-            
-
+            Console.WriteLine("Good Bye!!!");          
             Console.ReadKey();
 
+            
         }
     }
 }
